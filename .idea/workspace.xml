@@ -12,6 +12,9 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2FJP7fNpzrWnh10xHHtfRTiyIL6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />

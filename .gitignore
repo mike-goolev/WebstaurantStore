@@ -1,0 +1,11 @@
+.DS_Store
+.DS_Store?
+.gradle
+classes/
+build/
+.idea/
+gradle/
+gradlew
+gradlew.bat
+out/
+testreports/
