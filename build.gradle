@@ -12,5 +12,25 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.4.0'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.4.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.141.59'
+    compile 'org.slf4j:slf4j-simple:1.7.5'
+
+}
+
+test {
+    testLogging.exceptionFormat = 'full'
+    dependsOn(clean)
+    systemProperty "headless", System.getProperty("headless")
+    systemProperty "browser", System.getProperty("browser")
+
+    useTestNG() {
+        useDefaultListeners = true
+        outputDirectory = file("$projectDir/TestNG_Report")
+    }
+
+    reports.html.setDestination(file("$projectDir/Gradle_Report"))
 }
